@@ -1,0 +1,25 @@
+<!-- persons_list.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Persons List</title>
+</head>
+<body>
+    <h1>Persons List</h1>
+    <table style="border: 1px solid; border-collapse: collapse;">
+        <tr>
+            {% for key, value in persons.0.items %}
+                <th style="background-color: aliceblue; border: 1px solid; padding: 12px;">{{ key }}</th>
+            {% endfor %}
+        </tr>
+        {% for person in persons %}
+            <tr >
+                {% for key, value in person.items %}
+                    <td style="border: 1px solid; padding: 12px;">{{ value }}</td>
+                {% endfor %}
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
